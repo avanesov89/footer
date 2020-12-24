@@ -40,4 +40,5 @@ footer {
     color: #fff;
     position: sticky;
     bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom);
 }
