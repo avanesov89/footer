@@ -8,6 +8,20 @@ html {
     padding: 0;
 }
 
+@supports (padding-top: constant(safe-area-inset-top)) {
+    html {
+      --safe-area-inset-top: constant(safe-area-inset-top);
+      height: calc(100% + var(--safe-area-inset-top));
+    }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+    html {
+      --safe-area-inset-top: env(safe-area-inset-top);
+      height: calc(100% + var(--safe-area-inset-top));
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -40,5 +54,4 @@ footer {
     color: #fff;
     position: sticky;
     bottom: 0;
-    padding-bottom: env(safe-area-inset-bottom, 20px);
 }
