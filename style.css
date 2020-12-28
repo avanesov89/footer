@@ -33,9 +33,9 @@ main {
 }
 
 footer {
-    height: 60px;
+    min-height: 60px;
+    height: auto;
     background: red;
-    line-height: 60px;
     text-align: center;
     color: #fff;
     position: sticky;
