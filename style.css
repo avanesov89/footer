@@ -1,57 +1,80 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-@supports (padding-top: constant(safe-area-inset-top)) {
-    html {
-      --safe-area-inset-top: constant(safe-area-inset-top);
-      height: calc(100% + var(--safe-area-inset-top));
-    }
-}
-
-@supports (padding-top: env(safe-area-inset-top)) {
-    html {
-      --safe-area-inset-top: env(safe-area-inset-top);
-      height: calc(100% + var(--safe-area-inset-top));
-    }
-}
 
 body {
+    background: #ccc;
     margin: 0;
     padding: 0;
-    height: 100%;
-    display: grid;
-    position: relative;
-    grid-template-rows: auto 1fr auto;
 }
 
-header {
-    height: 60px;
-    background: blue;
-    line-height: 60px;
-    text-align: center;
-    color: #fff;
+.ChatPage-chat-content__body {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  max-width: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 11;
 }
 
-main {
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    padding-bottom: 70px;
+.ChatPage-chat-workarea__header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  background: #242932;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: 10;
 }
 
-footer {
-    min-height: 60px;
-    height: auto;
-    background: red;
-    text-align: center;
-    color: #fff;
-    position: sticky;
-    bottom: 0;
+.ChatPage-chat-workarea {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin-top: 0;
+}
+
+.ChatPage-chat-workarea__top {
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.ChatPage-chat-workarea__content {
+  padding: 20px;
+  background: none;
+  border: none;
+  width: 100%;
+  height: calc(100vh - 95px);
+  top: 45px;
+  position: relative;
+  overflow-y: scroll;
+  scrollbar-color: #2682eb transparent;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+
+.ChatPage-chat-workarea__bottom {
+  background: #FFFFFF;
+  border: 1px solid #F4F5F6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 13px 20px;
+  z-index: 20;
+}
+
+.ChatPage-chat-workarea__item {
+  color: #fff;
 }
