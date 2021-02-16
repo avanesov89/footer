@@ -3,6 +3,7 @@ body {
     background: #ccc;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .ChatPage-chat-content__body {
@@ -14,7 +15,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: #000;
   z-index: 11;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .ChatPage-chat-workarea__content {
-  padding: 20px;
+  padding: 0 20px;
   background: none;
   border: none;
   width: 100%;
@@ -59,16 +59,13 @@ body {
   scrollbar-color: #2682eb transparent;
   scrollbar-width: thin;
   box-sizing: border-box;
-  border-radius: 4px;
-  margin-bottom: 3px;
 }
 
 .ChatPage-chat-workarea__bottom {
   background: #FFFFFF;
   border: 1px solid #F4F5F6;
   box-sizing: border-box;
-  border-radius: 4px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 13px 20px;
@@ -76,5 +73,5 @@ body {
 }
 
 .ChatPage-chat-workarea__item {
-  color: #fff;
+  color: #000;
 }
