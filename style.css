@@ -65,7 +65,7 @@ body {
   background: #FFFFFF;
   border: 1px solid #F4F5F6;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 13px 20px;
