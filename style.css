@@ -19,7 +19,7 @@ body {
 }
 
 .ChatPage-chat-workarea__header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   left: 0;
@@ -29,13 +29,7 @@ body {
   box-sizing: border-box;
   align-items: center;
   z-index: 10;
-}
-
-.ChatPage-chat-workarea {
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
-  margin-top: 0;
+  min-height: 50px;
 }
 
 .ChatPage-chat-workarea__top {
@@ -48,28 +42,27 @@ body {
 }
 
 .ChatPage-chat-workarea__content {
-  padding: 0 20px;
   background: none;
-  border: none;
-  width: 100%;
-  height: calc(100vh - 95px);
-  top: 45px;
-  position: relative;
+  margin: 0;
+  padding: 10px 10px 50px 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   overflow-y: scroll;
-  scrollbar-color: #2682eb transparent;
-  scrollbar-width: thin;
-  box-sizing: border-box;
+  height: calc(100vh - 160px);
 }
 
 .ChatPage-chat-workarea__bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
   background: #FFFFFF;
   border: 1px solid #F4F5F6;
   box-sizing: border-box;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   padding: 13px 20px;
-  z-index: 20;
 }
 
 .ChatPage-chat-workarea__item {
